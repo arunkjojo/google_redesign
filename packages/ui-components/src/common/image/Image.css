@@ -1,0 +1,17 @@
+.image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.image--rectangle {
+    border-radius: 0%;
+}
+
+.image--circle {
+    border-radius: 50%;
+}
+
+.image--rounded {
+    border-radius: 15%;
+}

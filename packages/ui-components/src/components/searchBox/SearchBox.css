@@ -1,0 +1,23 @@
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-icon {
+    width: 20px;
+    height: fit-content;
+    margin-right: 10px;
+
+}
+
+.search-input {
+    flex: 0;
+}
+
+.mic-icon {
+    flex: initial;
+    width: 50px;
+    height: fit-content;
+    margin-left: 10px;
+}

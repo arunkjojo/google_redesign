@@ -1,0 +1,35 @@
+.label {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.label--lighter {
+    font-weight: 100;
+}
+
+.label--normal {
+    font-weight: normal;
+}
+
+.label--bold {
+    font-weight: bolder;
+}
+
+.label--white {
+    color: white;
+}
+
+.label--black {
+    color: black;
+}
+
+.label--small {
+    font-size: 15px;
+}
+
+.label--medium {
+    font-size: 20px;
+}
+
+.label--large {
+    font-size: 25px;
+}

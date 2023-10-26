@@ -1,0 +1,21 @@
+.service-tray {
+    opacity: 1;
+    cursor: pointer;
+    vertical-align: middle;
+    font: 13px/27px Roboto, Arial, sans-serif;
+}
+
+.service-tray--small {
+    height: 5px;
+    width: 5px;
+}
+
+.service-tray--medium {
+    height: 40px;
+    width: 40px;
+}
+
+.service-tray--large {
+    height: 60px;
+    width: 60px;
+}
