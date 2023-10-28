@@ -1,4 +1,6 @@
-import * as S from './HeaderNavbar.style'
+import { ProfileIcon } from '../profileIcon/ProfileIcon'
+import { ServiceTray } from '../serviceTray/ServiceTray'
+import './HeaderNavbar.css'
 
 export interface HeaderNavbarProps {
   /**
@@ -17,8 +19,15 @@ export interface HeaderNavbarProps {
 
 export const HeaderNavbar = ({ size = 'medium', label, ...props }: HeaderNavbarProps) => {
   return (
-    <S.ButtonWrapper type="button" className={['storybook-button', `storybook-button--${size}`, `storybook-button--default`].join(' ')} {...props}>
-      {label}
-    </S.ButtonWrapper>
+    <div className="google-header">
+      <div className="gmail-img">
+        <ProfileIcon size={'small'} src={'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50'} alt={'profile'} badge={true} />
+      </div>
+      <div className="header-icons">
+        <ServiceTray size={'small'} />
+        <a href="#">Images</a>
+        <a href="#">Gmail</a>
+      </div>
+    </div>
   )
 }

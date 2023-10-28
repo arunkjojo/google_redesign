@@ -9,30 +9,40 @@ export const ImageWrapper = styled.img`
   &.storybook-image--badged {
   }
   &.storybook-image--default {
-    width: 75px;
-    width: 75px;
+    width: 60px;
+    width: 60px;
   }
   &.storybook-image--small {
-    width: 50px;
-    width: 50px;
+    width: 45px;
+    width: 45px;
   }
   &.storybook-image--medium {
-    width: 100px;
-    width: 100px;
+    width: 50px;
+    width: 50px;
   }
   &.storybook-image--large {
-    width: 150px;
-    width: 150px;
+    width: 100px;
+    width: 100px;
   }
 `
 
 export const Badge = styled.span`
   position: absolute;
-  right:-0px;
   margin-bottom: 0%;
   top:50%;
   padding: 1em 1em;
   border-radius: 50%;
   background-color: #89CFF0;
-  font-size: 8px;
+  &.badged--medium {
+    font-size: 8px;
+    left: 100px;
+  }
+  &.badged--small {
+    font-size: 6px;
+    left: 45px;
+  }
+  &.badged--large {
+    font-size: 10px;
+    left: 150px;
+  }
 `;
