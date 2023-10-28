@@ -21,7 +21,7 @@ export const ProfileIcon = ({ size = 'medium', badge, src, alt, ...props }: Prof
       <S.ImageWrapper src={src} alt={alt} className={['storybook-image', `storybook-image--${size}`, badged].join(' ')} {...props} />
 
       {badge && (
-        <S.Badge></S.Badge>
+        <S.Badge className={['badged', `badged--${size}`, badged].join(' ')}></S.Badge>
       )}
     </section>
   )

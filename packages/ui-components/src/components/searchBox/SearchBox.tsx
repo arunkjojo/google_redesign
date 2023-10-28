@@ -1,5 +1,3 @@
-import { Image } from '../../common/image/Image'
-import { Input } from '../../common/input/Input'
 import './SearchBox.css'
 
 export interface SearchBoxProps {
@@ -19,36 +17,39 @@ export const SearchBox = ({ type = 'text', placeholder, value, onChange, size = 
     console.log(event.target.value);
   }
   return (
-    <div className='search-box'>
+    <div className={`input-group text-center search-box--${size}`}>
 
-      <svg className="search-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7">
-        <g className="search-path" fill="none" stroke="gray">
-          <path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4" />
-          <circle cx="8" cy="8" r="7" />
-        </g>
-      </svg>
-
-      <div className="search-input">
-        <Input type={type} placeholder={placeholder} value={value} onChange={searchHandler} size={size} />
+      <div className="input-group-append">
+        <span className="input-group-text">
+          <i className='icon search-icon'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#5F6368">
+              <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+            </svg>
+          </i>
+        </span>
       </div>
 
-      <svg className="mic-icon" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
-        <g>
-          <g fill="blue" id="g17480" transform="translate(646.3034,236.3789)">
-            <path className="st6" d="M-571.3-147.3c7.9,0,14.2-6.4,14.2-14.2l0-33.2c0-7.9-6.4-14.2-14.2-14.2    c-7.9,0-14.2,6.4-14.2,14.2v33.2C-585.5-153.7-579.1-147.3-571.3-147.3" id="path17482" />
-          </g>
-          <g fill="green" id="g17484" transform="translate(645.4803,233.1492)">
-            <path className="st5" d="M-575.2-125.5L-575.2-125.5v14.9h9.5v-14.8c-1.5,0.2-3.1,0.2-4.7,0.2    C-572.1-125.1-573.6-125.2-575.2-125.5" id="path17486" />
-          </g>
-          <g fill="yellow" id="g17488" transform="translate(643.3809,235.9115)">
-            <path className="st9" d="M-585.2-144.1c-4.2-4.3-6.9-9.5-6.9-16.6h-9.5c0,9.5,3.7,17.3,9.7,23.3l0.1-0.1c0,0,0,0-0.1-0.1L-585.2-144.1z" id="path17490" />
-          </g>
-          <g fill="red" id="g17492" transform="translate(650.4081,238.79)">
-            <path className="st7" d="M-551.7-163.6c0,11.9-10.5,23.6-23.7,23.6c-6.6,0-12.5-2.7-16.8-7l-0.1,0.1l-6.6,6.6c0,0,0,0,0.1,0.1c4.9,4.9,11.4,8.2,18.7,9.3c1.6,0.2,3.2,0.4,4.8,0.4c1.6,0,3.2,0,4.7-0.2c16.1-2.3,28.4-16.1,28.4-32.7H-551.7z" id="path17494" />
-          </g>
-        </g>
-      </svg>
+      <input
+        type={type}
+        className="form-control"
+        placeholder={placeholder}
+        value={value}
+        onChange={searchHandler}
+      />
 
+      <div className="input-group-append">
+        <span className="input-group-text">
+          <i className='icon mic-icon'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <path fill="none" d="M0 0h24v24H0z" />
+              <path fill="#4285F4" d="M12 15c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v7c0 1.66 1.34 3 3 3z" />
+              <path fill="#34A853" d="M11 18.92h2V22h-2z" />
+              <path fill="#F4B400" d="M7 12H5c0 1.93.78 3.68 2.05 4.95l1.41-1.41C7.56 14.63 7 13.38 7 12z" />
+              <path fill="#EA4335" d="M12 17c-1.38 0-2.63-.56-3.54-1.47l-1.41 1.41A6.99 6.99 0 0 0 12.01 19c3.87 0 6.98-3.14 6.98-7h-2c0 2.76-2.23 5-4.99 5z" />
+            </svg>
+          </i>
+        </span>
+      </div>
     </div>
   )
 }
